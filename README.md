@@ -1,5 +1,12 @@
 # DXF viewer [![npm](https://img.shields.io/npm/v/dxf-viewer)](https://www.npmjs.com/package/dxf-viewer)
 
+# 캐드의 도면을 처리하는 과정에서 일부 문자가 깨지는 문제로 인해서 수정하여 공유함.
+
+추가된 내용
+```
+text = text.replaceAll("%%P", "±").replaceAll("%%C", "Ø");
+```
+
 *If you just need to view your DXF, [click here](https://vagran.github.io/dxf-viewer-example/).*
 
 This package provides DXF 2D viewer component written in JavaScript. It renders drawings using WebGL
