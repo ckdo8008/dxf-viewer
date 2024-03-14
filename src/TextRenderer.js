@@ -15,7 +15,7 @@ const SPECIAL_CHARS_RE = /(?:%%([dpcou%]))|(?:\\U\+([0-9a-fA-F]{4}))/g
  * @return {string} String with special characters replaced.
  */
 export function ParseSpecialChars(text) {
-    text = text.replaceAll("%%P", "±").replaceAll("%%C", "Ø");
+    text = text.replaceAll("%%P", "±").replaceAll("%%C", "Ø").replaceAll("%%p", "±").replaceAll("%%c", "Ø");
     return text.replaceAll(SPECIAL_CHARS_RE, (match, p1, p2) => {
         if (p1 !== undefined) {
             switch (p1) {
